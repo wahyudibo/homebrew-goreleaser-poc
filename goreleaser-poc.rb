@@ -5,21 +5,21 @@
 class GoreleaserPoc < Formula
   desc ""
   homepage "https://github.com/wahyudibo/goreleaser-poc"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.0/goreleaser-poc_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "ebf98ef52a34dcafee8e4b6da46dd78a8b254d54487f4125ba2fd7cb696c82d0"
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.1/goreleaser-poc_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "f06a30e6e07b64386f9b2ed630944522a737452bfd08d2e85752831a2e2b7b23"
 
       def install
         bin.install "goreleaser-poc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.0/goreleaser-poc_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "206caa4272b770ae321428545d8f07d205343b1f820706191eb8e0f502c7e6dd"
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.1/goreleaser-poc_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "99b79b71f477335be9e6d258fce7e07c3e1c6fa47015dc8578dd944569b0d363"
 
       def install
         bin.install "goreleaser-poc"
@@ -29,16 +29,16 @@ class GoreleaserPoc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.0/goreleaser-poc_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "809357fd15231f2ecd6227d5334a17b190d662c5f19567c16a1f687fe56fb4ad"
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.1/goreleaser-poc_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "4da7c09b06583e15a04f45248a26a0d0d7df62bcd1c1eb4d6d3f060473e81ef9"
 
       def install
         bin.install "goreleaser-poc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.0/goreleaser-poc_0.1.0_Linux_arm64.tar.gz"
-      sha256 "dcc67927239cfe3e2db26b853982ad965dbf9b79192db954321a920a2f7336c5"
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.1/goreleaser-poc_0.1.1_Linux_arm64.tar.gz"
+      sha256 "32fe24e0167553c1cb713a0837baebf01b9c00c468c23b079f781c510bb2d2ff"
 
       def install
         bin.install "goreleaser-poc"

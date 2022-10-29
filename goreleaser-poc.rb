@@ -11,7 +11,7 @@ class GoreleaserPoc < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_x86_64.tar.gz"
-      sha256 "b4e5f068fa01dbe61722e625df7ad3038622429cfcae8686bf3a9b51e12f9379"
+      sha256 "ca51e71d1c19da59a29d4078583a448fa4fd910accb8c2eff4636232b9083c28"
 
       def install
         bin.install "goreleaser-poc"
@@ -19,7 +19,7 @@ class GoreleaserPoc < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_arm64.tar.gz"
-      sha256 "8d11e3c961fdc001c4c45e4c0e091419507846d31a97eaf5ea6d10553b87cb56"
+      sha256 "9b73dc3b5af9c17b7717dbaa308b2ac949a201638dd1907b6ab4b76471983c1b"
 
       def install
         bin.install "goreleaser-poc"
@@ -28,17 +28,17 @@ class GoreleaserPoc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_x86_64.tar.gz"
-      sha256 "0956926ce5090caf5e68b5ae668a6a69a8219aafa5b18ae48c87ae89456674f6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_arm64.tar.gz"
+      sha256 "b0948d3f33fa4cdae4085dcf14bef627ed85bb2bac6ecf3e46acb2049e32b7f4"
 
       def install
         bin.install "goreleaser-poc"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_arm64.tar.gz"
-      sha256 "a44b65a2f5486a737295793a26d4b83804231b094a7d78569f306f7437638a27"
+    if Hardware::CPU.intel?
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_x86_64.tar.gz"
+      sha256 "32f3641d7cd10fd3a3c7a608a7ec2cbf5548f47660bef34a7ed6f31d47352c8f"
 
       def install
         bin.install "goreleaser-poc"

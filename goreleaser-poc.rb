@@ -9,17 +9,17 @@ class GoreleaserPoc < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_arm64.tar.gz"
-      sha256 "7899e48987b466c0e3dda434999520638f37ac10fb68e399d03d64092778c4ee"
+    if Hardware::CPU.intel?
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_x86_64.tar.gz"
+      sha256 "b4e5f068fa01dbe61722e625df7ad3038622429cfcae8686bf3a9b51e12f9379"
 
       def install
         bin.install "goreleaser-poc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_x86_64.tar.gz"
-      sha256 "4524b24d947b14fe7160a2d6f7d93eece5b65961ea2e57edda1f411853e1bfc4"
+    if Hardware::CPU.arm?
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_arm64.tar.gz"
+      sha256 "8d11e3c961fdc001c4c45e4c0e091419507846d31a97eaf5ea6d10553b87cb56"
 
       def install
         bin.install "goreleaser-poc"
@@ -30,7 +30,7 @@ class GoreleaserPoc < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_x86_64.tar.gz"
-      sha256 "b8ad4b3ce7ae077e0f2f96eef5617dc5cc7c1844c878ac37cd4b43b77813a478"
+      sha256 "0956926ce5090caf5e68b5ae668a6a69a8219aafa5b18ae48c87ae89456674f6"
 
       def install
         bin.install "goreleaser-poc"
@@ -38,7 +38,7 @@ class GoreleaserPoc < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_arm64.tar.gz"
-      sha256 "f97839c078f44b13798acf5a7376c80c73fe74384cc1f4a75090b21a9ff5ff37"
+      sha256 "a44b65a2f5486a737295793a26d4b83804231b094a7d78569f306f7437638a27"
 
       def install
         bin.install "goreleaser-poc"

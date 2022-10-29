@@ -9,17 +9,17 @@ class GoreleaserPoc < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_x86_64.tar.gz"
-      sha256 "ca51e71d1c19da59a29d4078583a448fa4fd910accb8c2eff4636232b9083c28"
+    if Hardware::CPU.arm?
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_arm64.tar.gz"
+      sha256 "351a62861878e335702f55937e2ce638af6a476077da66a9d64ff80d7ee12823"
 
       def install
         bin.install "goreleaser-poc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_arm64.tar.gz"
-      sha256 "9b73dc3b5af9c17b7717dbaa308b2ac949a201638dd1907b6ab4b76471983c1b"
+    if Hardware::CPU.intel?
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_darwin_x86_64.tar.gz"
+      sha256 "bf9b5438317fe0a2e47c5caf8208c1b4cc737b33ea2a5eec7f1390ce862593f1"
 
       def install
         bin.install "goreleaser-poc"
@@ -28,17 +28,17 @@ class GoreleaserPoc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_arm64.tar.gz"
-      sha256 "b0948d3f33fa4cdae4085dcf14bef627ed85bb2bac6ecf3e46acb2049e32b7f4"
+    if Hardware::CPU.intel?
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_x86_64.tar.gz"
+      sha256 "70da50c7cd04b05c13bcd1835d4f04d67eb551d692767653be0bbad0fc4386a3"
 
       def install
         bin.install "goreleaser-poc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_x86_64.tar.gz"
-      sha256 "32f3641d7cd10fd3a3c7a608a7ec2cbf5548f47660bef34a7ed6f31d47352c8f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/wahyudibo/goreleaser-poc/releases/download/v0.1.2/goreleaser-poc_v0.1.2_linux_arm64.tar.gz"
+      sha256 "3ee431983239e9747eac1c964742973ace8e37d9f5f8a0549561570745cd0ed7"
 
       def install
         bin.install "goreleaser-poc"
